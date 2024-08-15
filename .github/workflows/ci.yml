@@ -54,7 +54,7 @@ jobs:
           # Docker engine is no longer available because of licensing
           # Alternative Colima is part of the github macOS runner
           # SAM v1.47.0+ needed for colima support, unable to use Python 3.6
-          colima start
+          colima start --arch x86_64
           # Ensure colima is configured for later user
           echo "DOCKER_HOST=unix://$HOME/.colima/default/docker.sock" >> $GITHUB_ENV
           # Verify Docker

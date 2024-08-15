@@ -1271,11 +1271,11 @@ describe('when delivering logs', () => {
             loggerProxy.addLogPublisher(s3Logger);
 
             loggerProxy.log('count: [%d]', 5.12);
-            loggerProxy.log('timestamp: [%s]', new Date('2020-01-01'));
+            loggerProxy.log('timestamp: [%s]', new Date('2020-01-01').toISOString());
 
-            loggerProxy.log('timestamp: [%s]', new Date('2020-01-02'));
-            loggerProxy.log('timestamp: [%s]', new Date('2020-01-03'));
-            loggerProxy.log('timestamp: [%s]', new Date('2020-01-04'));
+            loggerProxy.log('timestamp: [%s]', new Date('2020-01-02').toISOString());
+            loggerProxy.log('timestamp: [%s]', new Date('2020-01-03').toISOString());
+            loggerProxy.log('timestamp: [%s]', new Date('2020-01-04').toISOString());
             expect(inspect.defaultOptions.depth).toBe(8);
             await loggerProxy.waitCompletion();
 

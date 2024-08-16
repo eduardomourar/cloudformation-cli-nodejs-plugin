@@ -14,7 +14,7 @@
     },
     "dependencies": {
         "{{lib_name}}": "{{lib_path}}",
-        "class-transformer": "0.3.1"
+        "class-transformer": "0.5.1"
     },
     "devDependencies": {
         "@types/node": "^20.0.0",
